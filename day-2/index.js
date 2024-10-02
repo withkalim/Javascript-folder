@@ -1,3 +1,7 @@
+// THE MEANING OF BLOCK SCOPE: This scope restricts the variable that is declared inside a specific block, 
+// from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped.
+// and Var variable don't restriction on block scope.
+
 
 // block scope
 // 1. var variable with scope 
@@ -47,3 +51,9 @@ if(number < number2){
 }else {
     console.log(number + " Is greater then " + number2);
 }
+
+
+
+
+
+
