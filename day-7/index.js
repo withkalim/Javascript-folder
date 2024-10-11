@@ -1,36 +1,42 @@
 // 1. Print numbers from 30 - 60 with range of 5
-// for(var i = 30; i < 60; i+= 2){
-//     console.log(i);
-// }
+for(var i = 30; i < 60; i+= 2){
+    console.log(i);
+}
+console.log("___________________");
+
+
 
 // 2. Print number from 50- 100 with range of 3 and count them
-// var count = 0;
-// for(var i = 50; i < 100; i+=3){
-//     count++;
-// }
+var count = 0;
+for(var i = 50; i < 100; i+=3){
+    count++;
+}
+console.log(count);
+console.log("___________________");
 
-// console.log(count);
+
 
 // 3. Print number from 10 - 50 with range 2 
 // add 10 for every element & return in array
-// var starting = 10;
-// var end = 50;
-// var sequnce = 2;
+var starting = 10;
+var end = 50;
+var sequnce = 2;
 
-// function numbers(starting, end, sequnce){
-//     var emptyarr = [];
-//     for(var i = starting; i <= end; i+= sequnce){
-//       emptyarr.push(i + 10); 
-//     }
-//     return emptyarr;
-// }
-// console.log(numbers(starting, end, sequnce));
+function numbers(starting, end, sequnce){
+    var emptyarr = [];
+    for(var i = starting; i <= end; i+= sequnce){
+      emptyarr.push(i + 10); 
+    }
+    return emptyarr;
+}
+console.log(numbers(starting, end, sequnce));
+console.log("___________________");
 
 
-// Print number from 233 to 456 and 
+//Question 4.  Print number from 233 to 456 and 
 // find who is odd number inside it return count it
-var starting = 1;
-var end = 10;
+var starting = 233;
+var end = 456;
 
 function findOddNumber(starting, end){
  
