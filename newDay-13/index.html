@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input value fetch</title>
+    <style>
+      .div1 {
+        margin: 20% 30%;
+      }
+      input {
+        padding: 10px 19px;
+        border-radius: 6px;
+      }
+      button {
+        padding: 10px 16px;
+        background-color: chartreuse;
+        color: aliceblue;
+        border-radius: 6px;
+      }
+      .h3Style{
+        color:rgb(97, 89, 89);
+        border-bottom: 1px solid rgb(97, 89, 89);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <input type="text" id="UserId" name="username" />
+      <button id="userbtn1" onclick="login()">Send</button>
+      <h1>Logged user lists:</h1>
+      <div id="parentDiv"></div>
+    </div>
+
+    <script>
+      window.onload = function(){
+        const userList = JSON.parse(localStorage.getItem("personList")) || [];
+        const parentContainer =  document.getElementById("parentDiv");
+
+        let structure = "";
+        for(var i=0; i<userList.length; i++){
+          structure += `<h3 class="h3Style">${userList[i]}</h3>`;
+        }
+        console.log(structure, "structure");
+        parentContainer.innerHTML = structure;
+      }
+      function login() {
+        // alert("inside the fuction");
+        var userName = document.getElementById("UserId").value;
+        console.log(userName);
+
+        const userList = JSON.parse(localStorage.getItem("personList")) || [];
+        userList.push(userName);
+        console.log(userList, "it's userLists");
+
+        localStorage.setItem("personList", JSON.stringify(userList));
+        document.getElementById("UserId").value = "";
+
+        const parentContainer =  document.getElementById("parentDiv");
+        // var h1Create = document.createElement("h1");
+        // h1Create.innerHTML = userName;
+        // parentContainer.appendChild(h1Create);
+        let structure = "";
+        for(var i=0; i<userList.length; i++){
+          structure += `<h3 class="h3Style">${userList[i]}</h3>`;
+        }
+        console.log(structure, "structure");
+        parentContainer.innerHTML = structure;
+      }
+      // json.stringify() and json.parse()
+      //     const newObject = {name : "max"};
+      //      const jsonVar = JSON.stringify(newObject);
+      // console.log(jsonVar);
+
+      // // json.parse use
+      // console.log(JSON.parse(jsonVar));
+    </script>
+  </body>
+</html>

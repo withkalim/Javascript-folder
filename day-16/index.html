@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <button onclick="getLocalStorage()">Click</button>
+    <script>
+        function getLocalStorage() {
+            alert("function excustion");
+            localStorage.setItem("userEmail", JSON.stringify({age:  20}));
+         
+        }
+
+        // Here is two function for send data to browser with JSON 
+        
+        // JSON.stringify(); for js -> JSON convert
+        // JSON.parse();  for JSON -> js convert 
+    </script>
+
+    <!-- vsCode -> JS -> sending data in JS
+
+    Browser -> Want JSON Object [JavaScript Object Notation]. 
+
+    In js syntex of object is 
+    {key : "value"} 
+
+    In JSON syntex of Object is 
+    {"key" : "value"} JSON required quotation for both key and value -->
+
+</body>
+
+</html>

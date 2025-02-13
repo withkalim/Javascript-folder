@@ -51,3 +51,22 @@ while (i < newArr.length) {
     i++;
 }
 console.log(count, " is count of even number");
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1. Print numbers from who is odd number in array
+var numArray = [6,32,63,10,31,2,8,21,14];
+
+for(var i = 0; i < numArray.length; i++){
+    console.log(numArray[i]);
+}

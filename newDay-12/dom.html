@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>work for DOM</title>
+  </head>
+  <body>
+    <div id="myhtag">
+      <p id="childId">Child paragraph</p>
+    </div>
+    <h1 class="myClass">Class attribute</h1>
+    <br />
+    <input id="nameId" onchange="hangleFunc()" name="userName" /><br />
+    <input id="emailId" onchange="emailhangle()" name="useremail" /><br />
+    
+    <script>
+        console.log(document.getElementById("myhtag"), "heading");
+        document.getElementById("myhtag").innerHTML = "This is new One"; //innerhtml not work with class
+
+        // create and appending & removing element
+        let childElement = document.createElement("div");
+        childElement.innerHTML = "This is child text";
+        // console.log(childElement);
+        let parentElement = document.getElementById("myhtag");
+        parentElement.appendChild(childElement);
+
+        
+        // Event listner
+        document.getElementById("myhtag").addEventListener("click", eventfunc);
+        function eventfunc() {
+          alert("you clicked h1 tag");
+        }
+
+      // remove event listner
+      document.getElementById("myhtag").removeEventListener("click", eventfunc)
+
+      
+      // 1. event Bubbling
+         document.getElementById("myhtag").addEventListener("click", function(){
+        console.log("You clicked parent tag");
+      })
+      document.getElementById("childId").addEventListener("click", function(){
+        console.log("You clicked childId tag");
+      })
+
+      //2. event delegate - it's show single parent element on clicked event of child not show child code
+      document.getElementById("myhtag").addEventListener("click", function(event){
+          if(event.target && event.target.matches("p")){
+              console.log("Parent Clicked");
+          }
+      })
+
+
+      // This is for check we are on name input or not
+      document.getElementById("nameId").addEventListener("click", function(event){
+        console.log(event.target.name , "Check input");
+      })
+
+    // how we get input data in console.log
+    function hangleFunc(){
+     console.log(document.getElementById("emailId").value);
+    }
+    function emailhangle(){
+     console.log(document.getElementById("nameId").value);
+    }
+    </script>
+  </body>
+</html>

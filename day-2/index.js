@@ -16,6 +16,7 @@
 //     let  y = "maxx";   
 // }
 // console.log(y);
+
 // 3. const variable outside the block scope
 
 // {
@@ -29,15 +30,15 @@ console.log(number);
 number = 100;
 console.log(number);  // here we can see let can reassign
 let number = 130;
-console.log(number);
+console.log(number); // but not declared it
 
-// let also try it with const variable
+// let's also try it with const variable
 const numbers = 10;
 console.log(numbers);
 numbers = 50;
 console.log(numbers); //here we can see const can't reassign
 const numbers = 90;
-console.log(numbers);
+console.log(numbers); //const also not declare
 
 
 // CONDITIONAL STATEMENT

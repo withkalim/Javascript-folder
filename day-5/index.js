@@ -52,3 +52,10 @@ console.log(place2);
 var place3 = ["asam","turbekistan","mahableshwer"];
 place3.pop();
 console.log(place3); 
+
+
+
+// push() for add new Element
+// unshift() for add new element at first position 
+// shift() for remove first element 
+// pop() for remove last element 

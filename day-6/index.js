@@ -1,6 +1,6 @@
 // Here we will solve broblem with loop
 
-for(var i=1; i < 11; i++){
+for(var i = 1; i < 11; i++){
     console.log(i);
 }
 
@@ -79,5 +79,4 @@ for(var i=1; i < 11; i++){
 // i = 11; 
 // i < 11 false
 // block will stop to execute
-
 
