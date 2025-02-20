@@ -116,19 +116,77 @@
 // ✅ Waits for All Promises to Resolve:-
 // Ensures that both user data and posts data are available before proceeding.
 
-function bothrun(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve("user data here Yupp");
-        }, 2000);
-    });
+// function bothrun(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//             resolve("user data here Yupp");
+//         }, 2000);
+//     });
+// }
+// function bothrun2(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//             reject("user accepted all cookies");
+//             // resolve("user accepted all cookies");
+//         }, 1500);
+//     })
+// }
+// Promise.all([bothrun(), bothrun2()]).then((msg)=> {console.log(msg,"msg");}).catch((error)=> {console.log(error,"error");})
+
+
+
+// promise with async function
+//  function myfunc() {
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve();
+//         },3000);
+//     })
+// }
+// async function anotherone() {
+//     console.log("before");
+//     const result = await myfunc().then((msg)=> {return "project complete"}).catch((error)=>{return "Error shown"});
+//     console.log(result, "After"); 
+// }
+// anotherone();
+
+
+// promise with random number
+// function checkRandom(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//              let statement = Math.random() > 0.5;
+//              if(statement){
+//                 resolve("positive number");
+//              }else{
+//                 reject("Negative number");
+//              }
+//         }, 3000);
+//     })
+// }
+// checkRandom().then((msg)=>{console.log(msg, "msg");}).catch((error)=>{console.log(error, "accured");});
+
+
+// for in loop with work on objec
+// var newplace = {palao:"pacific ocean",member: 4,motorCar: "motorPump"};
+// for(key in newplace){
+//     console.log(key ,":", newplace[key]);
+// }
+
+
+// for of loop work on arrays
+// let car = ["GTR","bantali","supra","mxlian"];
+// for(element of car){
+//     console.log(element);
+// }
+
+
+// hoc
+function hocfunc(a, b, c){
+ return c(a,b);
 }
-function bothrun2(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            reject("user accepted all cookies");
-            // resolve("user accepted all cookies");
-        }, 1500);
-    })
-}
-Promise.all([bothrun(), bothrun2()]).then((msg)=> {console.log(msg,"msg");}).catch((error)=> {console.log(error,"error");})
+const newVar = (a,b)=> a +  b;
+const newlet = (a,b)=> a - b;
+
+console.log(hocfunc(40,5, newVar));
+console.log(hocfunc(10,2, newlet));
