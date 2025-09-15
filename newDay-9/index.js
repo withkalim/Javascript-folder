@@ -36,7 +36,7 @@
 // myfunction(callbackfunc);
 
 
-// PROMISES:- promise is return complite or reject of given task 
+// PROMISES:- promise is return complete or reject of given task
 // const mypromise = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 
@@ -50,6 +50,17 @@
 // });
 // mypromise.then((msg) => { console.log(msg, "msg inside the then"); }).catch((msg) => { console.log(msg, "msg inside the catch"); }).finally(() => { console.log("Finally you'r promise completed"); })
 
+
+
+// const myPromise = new Promise((resolve, reject)=>{
+//     var twentiesPromise = true;
+//     if(twentiesPromise){
+//         resolve("You are still in touch");
+//     }else {
+//         reject("you failed as an promise");
+//     }
+// })
+// myPromise.then((msg)=>{console.log(msg, "success from then");}).catch((error)=> {console.log(error, "error from inside catch");})
 
 // promise without async await method 
 // function newFunc(){
@@ -143,7 +154,7 @@
 //         },3000);
 //     })
 // }
-// async function anotherone() {
+// async function anotherone() {        
 //     console.log("before");
 //     const result = await myfunc().then((msg)=> {return "project complete"}).catch((error)=>{return "Error shown"});
 //     console.log(result, "After"); 
@@ -182,11 +193,11 @@
 
 
 // hoc
-function hocfunc(a, b, c){
- return c(a,b);
-}
-const newVar = (a,b)=> a +  b;
-const newlet = (a,b)=> a - b;
+// function hocfunc(a, b, c){
+//  return c(a,b);
+// }
+// const newVar = (a,b)=> a +  b;
+// const newlet = (a,b)=> a - b;
 
-console.log(hocfunc(40,5, newVar));
-console.log(hocfunc(10,2, newlet));
+// console.log(hocfunc(40,5, newVar));
+// console.log(hocfunc(10,2, newlet));

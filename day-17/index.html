@@ -11,13 +11,13 @@
     <button onclick="getLocalStorage()">Click</button>
     <script>
         function getLocalStorage() {
-            alert("function excustion");
-            localStorage.setItem("userEmail", JSON.stringify({ age: 20 }));
+            // alert("function excustion");
+            // localStorage.setItem("userEmail", JSON.stringify({ age: 20 }));
 
             // for Get the data from localStorage
-            //    alert("data get");
-            //   var result = JSON.parse(localStorage.getItem("userEmail"));
-            //   console.log(result);
+               alert("data get");
+              var result = JSON.parse(localStorage.getItem("userEmail"));
+              console.log(result);
 
 
             // for delete the localStorage item 

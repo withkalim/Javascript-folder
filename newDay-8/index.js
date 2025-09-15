@@ -35,9 +35,9 @@
 
 
 // Map() method create new array by result of given task and store in new variable
-// var myarr = [2,5,8];
-// const result = myarr.map((myarr)=> myarr * myarr);
-// console.log(result); 
+var myarr = [2,5,8];
+const result = myarr.map((myarr)=> myarr * myarr);
+console.log(result); 
 
 
 // forEach() method used for performe tasks of array element one by one each
@@ -52,7 +52,7 @@
 // })
 
 
-// filter() method create shallow copy of array by filter the array element on function condition base
+// filter() method create shallow copy of array by filter the array element on function condition base  
 // var newOne = ["Strange", "Marocco","Mahabaleshwar","Los angles"];
 
 // const result =  newOne.filter((newOne)=> newOne.length > 8);
@@ -64,7 +64,7 @@
 
 // var initualVal = 0;
 // const additionOfValue = newarr2.reduce( (acu , cv)=> acu + cv,initualVal);
-// console.log(additionOfValue);
+// console.log(additionOfValue);        
 
 
 // find() method return very first element on base function condition base 
@@ -81,17 +81,17 @@
 
 
 // Reverse the array element without use buil-in method
-function reverseArray(array){
-var newArray = [];
+// function reverseArray(array){
+// var newArray = [];
 
-    for(var i = array.length-1; i >=0; i--){
-        // console.log(array[i]);
-       newArray[array.length-i-1] = array[i];
-    }
-    return newArray;
-}
-var sortedArray = ["a", "b", "c", "d"];
-console.log(reverseArray(sortedArray));
+//     for(var i = array.length-1; i >=0; i--){
+//         // console.log(array[i]);
+//        newArray[array.length-i-1] = array[i];
+//     }
+//     return newArray;
+// }
+// var sortedArray = ["a", "b", "c", "d"];
+// console.log(reverseArray(sortedArray));
 
 
 // 1st iteration

@@ -11,7 +11,7 @@
     </div>
     <h1 class="myClass">Class attribute</h1>
     <br />
-    <input id="nameId" onchange="hangleFunc()" name="userName" /><br />
+    <input id="nameId" onchange="namehandle()" name="userName" /><br />
     <input id="emailId" onchange="emailhangle()" name="useremail" /><br />
     
     <script>
@@ -22,8 +22,10 @@
         let childElement = document.createElement("div");
         childElement.innerHTML = "This is child text";
         // console.log(childElement);
+
+        // appending element 
         let parentElement = document.getElementById("myhtag");
-        parentElement.appendChild(childElement);
+        parentElement.appendChild(childElement); 
 
         
         // Event listner
@@ -33,7 +35,7 @@
         }
 
       // remove event listner
-      document.getElementById("myhtag").removeEventListener("click", eventfunc)
+      // document.getElementById("myhtag").removeEventListener("click", eventfunc)
 
       
       // 1. event Bubbling
@@ -53,16 +55,16 @@
 
 
       // This is for check we are on name input or not
-      document.getElementById("nameId").addEventListener("click", function(event){
-        console.log(event.target.name , "Check input");
-      })
+      // document.getElementById("nameId").addEventListener("click", function(event){
+      //   console.log(event.target.name , "Check input");
+      // })
 
     // how we get input data in console.log
-    function hangleFunc(){
-     console.log(document.getElementById("emailId").value);
+    function namehandle(){
+     console.log(document.getElementById("nameId").value);
     }
     function emailhangle(){
-     console.log(document.getElementById("nameId").value);
+     console.log(document.getElementById("emailId").value);
     }
     </script>
   </body>

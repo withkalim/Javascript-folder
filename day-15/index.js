@@ -19,7 +19,7 @@ console.log(CheckPalindrome(testing));
 var a = "madam";
 function chckPalm(a){
 
-    for(var i=0; i<Math.floor(a,length / 2); i++){
+    for(var i=0; i<Math.floor(a.length / 2); i++){
 
         if(a[i] == a[a.length - 1-i]){
             return "It's palindrome";
@@ -28,3 +28,4 @@ function chckPalm(a){
         }
     }
 }
+console.log(chckPalm(a));

@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculetor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      h2 {
+        color: #333;
+      }       
+
+      input[type="text"] {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 22px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <br />
+    <input type="text" id="num2" placeholder="Enter number 2" />
+    <br />
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('clear')">Clear</button>
+
+
+<h3 id="result">Result:</h3>
+
+    <script>
+      const calculate = (operator) => {
+        let num1Element = document.getElementById("num1");
+        let num2Element = document.getElementById("num2");
+
+        // parseFloat JavaScript function that takes a string and converts it into a decimal number
+        let number1 = parseFloat(num1Element.value);
+        let number2 = parseFloat(num2Element.value);
+        let result;
+
+        if(operator === "clear"){
+          num1Element.value = "";
+          num2Element.value = "";
+          document.getElementById("result").innerHTML = "Result:";
+          return;
+        }
+
+        if (operator === "+") {
+          result = number1 + number2;
+        } else if (operator === "-") {
+          result = number1 - number2;
+        } else if (operator === "/") {
+          if (number2 === 0) {
+            result = "You cant divide number by 0";
+          } else {
+            result = number1 / number2;
+          }
+        } else {
+          result = number1 * number2;
+        }
+        
+        document.getElementById("result").innerHTML = " Result: " + result;
+        number1.value = "";
+      };
+    </script>
+  </body>
+</html> 
+
+

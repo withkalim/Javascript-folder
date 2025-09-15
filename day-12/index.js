@@ -22,7 +22,7 @@
 //     var left = 0;
 //     var right = array.length - 1;
 
-//     while (left <= right) {
+//     while (left <= right) {           
 //         var midIndex = Math.floor((right + left) / 2);
 //         console.log(midIndex + " middle index" + array[midIndex]);
 

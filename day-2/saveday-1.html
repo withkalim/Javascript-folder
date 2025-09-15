@@ -1,0 +1,220 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html with some js</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 400px;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Your Todos Here</h2>
+        <input type="text" id="input-value" placeholder="Enter Todos"/>
+        <button onclick="todoAdd()">Submit</button>
+        <ol id="taskList"></ol>
+    </div>
+    
+    <script>
+       const todoAdd = ()=>{
+        let TodoInput = document.getElementById("input-value");
+        let inputValue = TodoInput.value.trim();
+
+        let foril = document.createElement("li");
+        foril.innerHTML = `<span>${inputValue}</span>`;
+
+        document.getElementById("taskList").appendChild(foril);
+        TodoInput.value = "";
+       }
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculetor</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 22px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <br />
+    <input type="text" id="num2" placeholder="Enter number 2" />
+    <br />
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('*')">*</button>
+
+
+<h3 id="result">Result:</h3>
+
+    <script>
+      const calculate = (operator) => {
+        let number1 = parseFloat(document.getElementById("num1").value);
+        let number2 = parseFloat(document.getElementById("num2").value);
+        let result;
+
+        if (operator == "+") {
+          result = number1 + number2;
+        } else if (operator == "-") {
+          result = number1 - number2;
+        } else if (operator == "/") {
+          if (number2 == 0) {
+            result = "you cant divide number by 0";
+          } else {
+            result = number1 / number2;
+          }
+        } else {
+          result = number1 * number2;
+        }
+        document.getElementById("result").innerHTML = " Result: " + result;
+        number1.value = "";
+      };
+    </script>
+  </body>
+</html> -->
+
+
+<!-- DOM manuplation -->
+ <!-- 1. Show/hide a div when a button is clicked. -->
+  <!-- <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show/hide div</title>
+    <style>
+      #myDiv{
+        display: none;
+        padding: 20px;
+        width: 200px;
+        height: auto;
+        margin-top: 10px;
+        text-align: center;
+        color: aliceblue;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>In below you can manuplation with div</h3>
+    <button onclick="btnTriggle()">Show/Hide</button>
+
+    <div id="myDiv">Hey! here i'm </div>
+
+    <script>
+    function btnTriggle(){
+      let div = document.getElementById("myDiv");
+      if (div.style.display === "none") {
+         div.style.display = "block";
+      }else {
+        div.style.display = "none";
+      }
+    }
+    </script>
+  </body>
+  </html> -->
+
+
+  <!-- <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+      .error{
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contact Form (Validation From)</h2>
+    <form action="#" onsubmit="validationFrom()">
+      Name:<input type="text" id="name"><br>
+      <span id="nameError" class="error"></span><br>
+      
+      Email:<input type="text" id="email"><br>
+      <span id="emailError" class="error"></span><br>
+      <button>Save</button>
+    </form>
+
+    <script>
+      function validationFrom(){
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let errorName = document.getElementById("nameError");
+        let errorEmail = document.getElementById("emailError");
+
+        let isValida = true;
+        errorName.innerHTML = "";
+        errorEmail.innerHTML = "";
+
+        if(name === ""){
+          errorName.innerHTML = "Name is reuired";
+          isValida = false;
+        }
+        if(email === ""){
+          errorEmail.innerHTML = "Email is required";
+          isValida = false;
+        }else if(!/^\S+@\S+\.\S+$/.test(email)){
+          errorEmail.innerHTML = "Enter Valid email along with character";
+          isValida = false;
+        }
+        return isValida; 
+      }
+    </script>
+  </body>
+  </html> -->

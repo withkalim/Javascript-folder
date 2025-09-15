@@ -1,4 +1,4 @@
-// Trasitional function
+// Traditional function
 // var a = 10;
 // var b = 3; 
 // function myFunc(){
@@ -56,3 +56,7 @@ const checkUserAge = (userAge) => {
     console.log(`user not eligible: ${NotEligible}`);
 }
 checkUserAge(userAge);
+
+
+
+

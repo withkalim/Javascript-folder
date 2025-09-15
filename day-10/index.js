@@ -17,7 +17,7 @@ var target = 13;
 var i = 0;
 while (i < newArr.length) {
 
-    if(newArr[i] != target){
+    if(newArr[i] != target){  
         console.log(newArr[i]);
     }
     i++;

@@ -5,14 +5,14 @@ var myObject = {
     location: "Thane",
     age: 20,
 }
-console.log("myObject", myObject);
+// console.log("myObject", myObject);
 console.log("<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
 
 // we can get inside object key and value by use two mathod
 // console.log(myObject.name);
 
 // and second one used with when we need space required
-// console.log(myObject["location"]);
+console.log(myObject["location"]);
 
 
 // we can add new object with value by used object constructer method
@@ -25,11 +25,12 @@ console.log("<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
 
 
 // add new value in object
-var newObject = new Object()
-newObject.myinsitute = "Awdiz",
-    newObject.locations = "Vashi"
+var newObject = new Object();
 
-newObject.favFood = "Apple";
+newObject.myinsitute = "Awdiz",
+newObject.locations = "Vashi",
+newObject.favFood = "Apple"
+
 console.log(newObject);
 console.log("<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
 
@@ -75,4 +76,4 @@ var testObj = {
         console.log(this.name,  " Mannnat");
     }
 }
-console.log(testObj.location);
+console.log(testObj.location());

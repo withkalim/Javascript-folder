@@ -35,6 +35,8 @@ while (starting > 0) {
     starting--;
 }
 console.log("_____________________________");
+
+
 // 2. Print only numbers from array - completed
 // then add even condition - completed
 // then calculation count of even numbers - completed
