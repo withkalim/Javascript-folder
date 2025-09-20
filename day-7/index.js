@@ -1,5 +1,5 @@
 // 1. Print numbers from 30 - 60 with range of 5
-// for(var i = 30; i < 60; i+= 2){
+// for(var i = 30; i < 60; i+= 5){
 //     console.log(i);
 // }
 // console.log("___________________");
@@ -66,3 +66,29 @@
 //   return newArr; // if return count write here
 // }
 // console.log(findit());
+
+
+
+
+// loop with range of 3 with it's count 
+// var count = 0;
+// for(let i=50; i <=100; i+= 3){
+//     count++;
+// }
+// console.log(count);
+// console.log("**********************************");
+
+
+
+
+// in loop find odd number with it count 
+function findOdd(){
+    var OddCount = 0;
+    for(let i=1; i<=20; i++){
+        if(i % 2 == 1){
+            OddCount++;
+        }
+    }
+    return " This is count Odd: "+ OddCount;
+}
+console.log(findOdd());

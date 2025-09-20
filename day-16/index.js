@@ -47,14 +47,3 @@ var setId =  setInterval(()=> {
 
 
 
-//  ======>(doubt)
-// var output = "This is set interval";
-// var id = setInterval( clearInterval() => {
-    
-// console.log(output);
-
-// if(output > 5){
-//     clearInterval(id);
-//     console.log("setInterval is cleared.");
-// }
-// },2000);

@@ -73,7 +73,7 @@ var testObj = {
     age: 59,
     location: function(){
         console.log("mumbai bandraa");
-        console.log(this.name,  " Mannnat");
+        console.log(this.name,  "is living at Mannnat");
     }
 }
 console.log(testObj.location());

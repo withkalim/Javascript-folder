@@ -105,16 +105,18 @@ var StudentScore = 62;
 
 var grade;
 if (StudentScore >= 90) {
-    console.log("Student got A grade");
+   grade = "A";
 } else if (StudentScore >= 80 && StudentScore < 90) {
-    console.log("Student got B grade");
-
+    grade = "B"
 } else if (StudentScore >= 70 && StudentScore < 80) {
-    console.log("Student got C grade");
+   grade = "C";
 
-} else {
+}else if(StudentScore < 70 && StudentScore > 50){
+    grade = "D";
+}else {
     console.log("Fail");
 }
+console.log(`Student got ${grade} grade`);
 
 
 // 7. Write a program to check if a given string contains the word "JavaScript".
@@ -189,31 +191,31 @@ switch (weekDay) {
 
 
 // 2. Write a program to perform basic arithmetic operations (add, subtract, multiply, divide) based on a user's choice.
-// var num1 = 10;
-// var num2 = 5;
-// var operations = "subtrac";
+var num1 = 10;
+var num2 = 5;
+var operations = "subtrac";
 
-// switch (operations) {
-//     case "subtrac":
-//         result = num1 - num2;
-//         console.log(`The subtraction is: ${result}`);
-//         break;
-//     case "add":
-//         result = num1 + num2;
-//         console.log(`The addition is: ${result}`);
-//         break;
-//     case "Multiply":
-//         result = num1 * num2;
-//         console.log(`The multiply is: ${result}`);
-//         break;
-//     case "divide":
-//         result = num1 / num1;
-//         console.log(`The division is: ${result}`);
-//         break;
-//     default:
-//         console.log("None of them");
-//         break;
-// }
+switch (operations) {
+    case "subtrac":
+        result = num1 - num2;
+        console.log(`The subtraction is: ${result}`);
+        break;
+    case "add":
+        result = num1 + num2;
+        console.log(`The addition is: ${result}`);
+        break;
+    case "Multiply":
+        result = num1 * num2;
+        console.log(`The multiply is: ${result}`);
+        break;
+    case "divide":
+        result = num1 / num1;
+        console.log(`The division is: ${result}`);
+        break;
+    default:
+        console.log("None of them");
+        break;
+}
 
 
 // 3. 3. Write a program to display the season based on the month number (1-12).
