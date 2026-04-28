@@ -43,8 +43,8 @@ function run2(text1 , text2){
 run2();  // here we not declare value that why it's thrown (undefine)
 
 
-// THE RETURN DEFINATION: the return keyword is used to send a specific value back to the code that called the function
-// function with return method
+// THE RETURN DEFINATION: return sends the value back to the place where the function was called.
+// ✔ In this case, that place is inside console.log()
 var car1 = "mustang";
 // var car2 = "contica";
 function run3(value1) {

@@ -33,15 +33,15 @@ for (key of myArr) {
 
 // (High order component) is accept another function is an parameter and return it's function
 
-// function funcOperators(a, b, operator) {
-//   return operator(a, b);
-// }
+function funcOperators(a, b, operator) {
+  return operator(a, b);
+}    
 
-// const add = (x, y) => x + y;
-// const multi = (x, y) => x - y;
+const add = (x, y) => x + y;
+const multi = (x, y) => x - y;
 
-// console.log(funcOperators(10, 6, add));
-// console.log(funcOperators(10, 6, multi));
+console.log(funcOperators(10, 6, add));
+console.log(funcOperators(10, 6, multi));
 
 // HOC with another example
 // function withLoggin(fn){
@@ -57,14 +57,14 @@ for (key of myArr) {
 
 // this-> keyword work with traditional function well
 // this -> keyword with arrow function
-// let myobj = {
-//   name: "banti",
-//   age: 32,
-//   something: function () {
-//     console.log(`hii ${this.name} is here`);
-//   },
-// };
-// myobj.something();
+let myobj = {
+  name: "banti",
+  age: 32,
+  something: function () {
+    console.log(`hii ${this.name} are you there`);
+  },
+};
+myobj.something();
 
 
 // for more understand this with two  object

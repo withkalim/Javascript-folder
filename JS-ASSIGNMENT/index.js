@@ -56,7 +56,7 @@ if(mynum % 2 == 0){
     console.log(mynum, " is eve n number");
 }else {
     console.log(mynum, " is odd number");
-}
+}  
 
 // 2. Write program to check person eligible for votes on their age
 var userAge = 88;
@@ -218,7 +218,7 @@ switch (operations) {
 }
 
 
-// 3. 3. Write a program to display the season based on the month number (1-12).
+// 3. Write a program to display the season based on the month number (1-12).
 // var month = 7;
 
 // switch (month) {

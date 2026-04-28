@@ -50,4 +50,4 @@ for(let i=0; i<OddNum.length; i++){
         OddCount++;
     }
 }
-console.log(OddCount);
+console.log(OddCount);           

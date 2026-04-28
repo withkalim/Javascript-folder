@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Check is number is Even or Odd</h1>
-    <input type="text" id="evenOddInput" placeholder="Enter Number">
+    <input type="text" id="userNumber" placeholder="Enter number for check even or odd">
     <button onclick="checkNumber()">Check</button>
+     
     <h3 id="numberContainer"></h3>
-
     <script>
       function checkNumber(){
-       let inputValue = document.getElementById("evenOddInput").value.trim();
-       const numberCon = document.getElementById("numberContainer");
+      let  typedNum = document.getElementById("userNumber").value.trim();
+      let NumOutputContainer = document.getElementById("numberContainer");
 
-       if(inputValue % 2 == 0){
-         numberCon.innerHTML = `${inputValue} : is even number`;
-       }else{
-        numberCon.innerHTML =  `${inputValue} : is odd number`;
-       }
+      if(typedNum % 2 == 0){
+        NumOutputContainer.innerHTML = `${typedNum} is even number`;
+      }else {
+        NumOutputContainer.innerHTML = `${typedNum} is odd number`;
+      }
       }
     </script>
-</body>
+    <br /><br />
+    <hr />
+
+    <input type="text" name="name" id="userId" placeholder="Enter your name" />
+    <button id="submitedUser" onclick="logeInUser()">Submit</button>
+
+    <h1>Logged users list</h1>
+    <div id="outputContainer"></div>
+
+    <script>
+      // on window load our fetched data will be stay at same place without fetched data clear in browser.
+      window.onload = function () {
+        const savedUser = JSON.parse(localStorage.getItem("loginUser")) || [];
+
+        const outputContainner = document.getElementById("outputContainer");
+        let text = "";
+        for (let i = 0; i < savedUser.length; i++) {
+          text += `<h3>${savedUser[i]}</h3>`;
+        }
+        outputContainner.innerHTML = text;
+      };
+
+      function logeInUser() {
+        let userName = document.getElementById("userId").value;
+        const savedUser = JSON.parse(localStorage.getItem("loginUser")) || [];
+        savedUser.push(userName);
+
+        localStorage.setItem("loginUser", JSON.stringify(savedUser));
+        document.getElementById("userId").value = "";
+
+        const outputContainner = document.getElementById("outputContainer");
+
+        let text = "";
+        for (let i = 0; i < savedUser.length; i++) {
+          text += `<h3> ${savedUser[i]}</h3>`;
+        }
+        console.log(text, "Fetched Users");
+        outputContainner.innerHTML = text;
+      }
+    </script>
+  </body>
 </html>

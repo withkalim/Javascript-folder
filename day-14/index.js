@@ -50,7 +50,7 @@ for (key in newObject) {
 console.log("<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
 
 
-// A function inside the object
+// A function inside the object 
 var myObject = {
     name: "user",
     location: "Thane",
@@ -73,7 +73,7 @@ var testObj = {
     age: 59,
     location: function(){
         console.log("mumbai bandraa");
-        console.log(this.name,  "is living at Mannnat");
+        console.log(this.name, " is living in Mannnat");
     }
 }
 console.log(testObj.location());

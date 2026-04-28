@@ -118,7 +118,7 @@ function factorial(num) {
   }
   return sum;
 }
-console.log(factorial(5));
+console.log(factorial(5));     
 console.log("__________________________________");
 
 // 10. Check if an Array is Sorted (Ascending Order)
@@ -131,4 +131,4 @@ function isSorted(arr) {
   return true;
 }
 console.log(isSorted([1, 2, 3, 4, 5]));
-console.log(isSorted([1, 3, 2, 4, 5]));
+console.log(isSorted([1, 3, 2, 4, 5]));     

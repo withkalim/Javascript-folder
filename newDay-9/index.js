@@ -37,18 +37,18 @@
 
 
 // PROMISES:- promise is return complete or reject of given task
-// const mypromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
+const mypromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
 
-//         let response = false;
-//         if (response) {
-//             resolve("Your promise successfully");
-//         } else {
-//             reject("Your promise failed");
-//         }
-//     }, 3000);
-// });
-// mypromise.then((msg) => { console.log(msg, "msg inside the then"); }).catch((msg) => { console.log(msg, "msg inside the catch"); }).finally(() => { console.log("Finally you'r promise completed"); })
+        let response = false;
+        if (response) {
+            resolve("Your promise successfully");
+        } else {
+            reject("Your promise failed");
+        }
+    }, 3000);
+});
+mypromise.then((msg) => { console.log(msg, "msg inside the then"); }).catch((msg) => { console.log(msg, "msg inside the catch"); }).finally(() => { console.log("Finally you'r promise completed"); })
 
 
 
@@ -66,7 +66,7 @@
 // function newFunc(){
 // return new Promise((resolve, reject)=>{
 //     setTimeout(() => {
-//         resolve("Project is completed");
+//         resolve("Pro`1254321`3467treNNBVC ject is completed");
 //     }, 3000);
 // });        
 // }
@@ -80,21 +80,21 @@
 
 
 // Promise with async await method
-// function newFunc2(){
-//    return new Promise((resolve, reject)=>{
-//      setTimeout(() => {
-//         resolve();
-//      }, 3000);
-//    });
-// }
+function newFunc2(){
+   return new Promise((resolve, reject)=>{
+     setTimeout(() => {
+        resolve();
+     }, 3000);
+   });
+}
 
-// async function another2(){
-// console.log("Before");
-// const result = await newFunc2().then((msg)=> {return "You'r project has completed"}).catch((error)=> {return "Error accured"});
+async function another2(){    
+console.log("Before");
+const result = await newFunc2().then((msg)=> {return "You'r project has completed"}).catch((error)=> {return "Error accured"});
 
-// console.log(result, "After");
-// }
-// another2();
+console.log(result, "After");
+}
+another2(); 
 
 
 // Fetch api store from backend 
@@ -127,22 +127,22 @@
 // ✅ Waits for All Promises to Resolve:-
 // Ensures that both user data and posts data are available before proceeding.
 
-// function bothrun(){
-//     return new Promise((resolve, reject)=>{
-//         setTimeout(() => {
-//             resolve("user data here Yupp");
-//         }, 2000);
-//     });
-// }
-// function bothrun2(){
-//     return new Promise((resolve, reject)=>{
-//         setTimeout(() => {
-//             reject("user accepted all cookies");
-//             // resolve("user accepted all cookies");
-//         }, 1500);
-//     })
-// }
-// Promise.all([bothrun(), bothrun2()]).then((msg)=> {console.log(msg,"msg");}).catch((error)=> {console.log(error,"error");})
+function bothrun(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve("user data here Yupp");
+        }, 2000);
+    });
+}
+function bothrun2(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            reject("user accepted all cookies");
+            // resolve("user accepted all cookies");
+        }, 1500);
+    })
+}
+Promise.all([bothrun(), bothrun2()]).then((msg)=> {console.log(msg,"msg");}).catch((error)=> {console.log(error,"error");})
 
 
 
@@ -195,9 +195,14 @@
 // hoc
 // function hocfunc(a, b, c){
 //  return c(a,b);
-// }
+// } 
 // const newVar = (a,b)=> a +  b;
 // const newlet = (a,b)=> a - b;
 
 // console.log(hocfunc(40,5, newVar));
 // console.log(hocfunc(10,2, newlet));
+
+
+
+
+

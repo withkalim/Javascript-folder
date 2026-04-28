@@ -1,6 +1,6 @@
 // THE MEANING OF BLOCK SCOPE: This scope restricts the variable that is declared inside a specific block, 
 // from access by the outside of the block. The let & const keyword facilitates the variables to be block scoped.
-// and Var variable don't restriction on block scope.
+// and Var variable don't restriction on block scope.    
 
 
 // block scope

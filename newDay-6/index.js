@@ -5,13 +5,13 @@
 //   var c = a * b;
 //   return c;  
 // }
-// console.log(myFunc());
+// console.log(myFunc());   
 
-// // Arrow function (ES6:version)
+//// Arrow function (ES6:version)
 // const newFunc = (string) => {
 //     console.log(string);
 // }
-// newFunc("FIFA");
+// newFunc("FIFA");      
 
 
 // Find out count of even or odd number.

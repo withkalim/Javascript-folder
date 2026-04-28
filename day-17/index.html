@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <button onclick="getLocalStorage()">Click</button>
     <script>
-        function getLocalStorage() {
-            // alert("function excustion");
-            // localStorage.setItem("userEmail", JSON.stringify({ age: 20 }));
+         alert("function excustion");
+        localStorage.setItem("userEmail", JSON.stringify({ age: 20 }));
+      function getLocalStorage() {
+       
+        // for Get the data from localStorage
+        alert("data get");
+        var result = JSON.parse(localStorage.getItem("userEmail"));
+        console.log(result);
 
-            // for Get the data from localStorage
-               alert("data get");
-              var result = JSON.parse(localStorage.getItem("userEmail"));
-              console.log(result);
+        // for delete the localStorage item
+        // alert("Item deleted");
+        // localStorage.removeItem("userEmail");
+      }
 
+      // Even loop basic run idea
+      console.log(1);
 
-            // for delete the localStorage item 
-            // alert("Item deleted");
-            // localStorage.removeItem("userEmail");
+      setTimeout(() => {
+        console.log(2);
+      }, 5000);
 
-        }
-
-     // Even loop basic run idea
-        console.log(1);
-
-        setTimeout(() => {
-            console.log(2);
-        }, 5000);
-
-        console.log(3)
+      console.log(3);
     </script>
+  </body>
+</html>

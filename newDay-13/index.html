@@ -11,7 +11,7 @@
       input {
         padding: 10px 19px;
         border-radius: 6px;
-      }
+      }  
       button {
         padding: 10px 16px;
         background-color: chartreuse;
@@ -41,7 +41,7 @@
         for(var i=0; i<userList.length; i++){
           structure += `<h3 class="h3Style">${userList[i]}</h3>`;
         }
-        console.log(structure, "structure");
+        // console.log(structure, "structure");
         parentContainer.innerHTML = structure;
       }
       function login() {
@@ -63,7 +63,7 @@
         let structure = "";
         for(var i=0; i<userList.length; i++){
           structure += `<h3 class="h3Style">${userList[i]}</h3>`;
-        }
+        }   
         console.log(structure, "structure");
         parentContainer.innerHTML = structure;
       }

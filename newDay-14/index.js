@@ -13,7 +13,7 @@
 //  console.log('Loading false');
 // }
 // }
-// getData();
+// getData();      
 
 
 
@@ -93,7 +93,7 @@ function CurryingFunc(txt1){
       }
 }
 const newBoth = CurryingFunc(8);
-console.log(newBoth(10));
+console.log(newBoth(10)); 
 
 
 // call- method used for add another object data in current object 
@@ -126,7 +126,8 @@ const data2 = {
 data.declaremethod.apply(data2, ["axy53@gmail.com", 88823464, "west-side"]);
 
 
-// bind - method work like same above method but it's not declare without add it to another variable 
+// bind - method work like same above method but it's not declare without add it to another variable . 
+// why this: bind() creates a new function with a fixed this, so we must store it to use it later.
 const bindData = {
     name: "john",
     greetMethod : function(parameter){

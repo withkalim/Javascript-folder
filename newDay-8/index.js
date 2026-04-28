@@ -13,7 +13,7 @@
 // // for remove the starting element
 // var newarr = [2,4,6,8,10];
 // newarr.shift();
-// console.log(newarr);
+// console.log(newarr);        
 
 
 // // for remove element from last
@@ -49,10 +49,10 @@ console.log(result);
 //     }else {
 //         console.log(`odd number is: ${ele}`);
 //     }
-// })
+// }) 
 
 
-// filter() method create shallow copy of array by filter the array element on function condition base  
+// filter() method create shallow copy of array by filter the array element on function condition base                   
 // var newOne = ["Strange", "Marocco","Mahabaleshwar","Los angles"];
 
 // const result =  newOne.filter((newOne)=> newOne.length > 8);
@@ -64,7 +64,7 @@ console.log(result);
 
 // var initualVal = 0;
 // const additionOfValue = newarr2.reduce( (acu , cv)=> acu + cv,initualVal);
-// console.log(additionOfValue);        
+// console.log(additionOfValue);                
 
 
 // find() method return very first element on base function condition base 
@@ -81,17 +81,19 @@ console.log(result);
 
 
 // Reverse the array element without use buil-in method
-// function reverseArray(array){
-// var newArray = [];
+function reverseArray(array){
+var newArray = [];
 
-//     for(var i = array.length-1; i >=0; i--){
-//         // console.log(array[i]);
-//        newArray[array.length-i-1] = array[i];
-//     }
-//     return newArray;
-// }
-// var sortedArray = ["a", "b", "c", "d"];
-// console.log(reverseArray(sortedArray));
+    for(var i = array.length-1; i >= 0; i--){
+        // array[i] takes the element from the end because the loop goes backward.
+        
+        // array.length - i - 1 calculates the position where that element should go in the new reversed array.
+       newArray[array.length-i-1] = array[i];
+    }
+    return newArray;                         
+}
+var sortedArray = ["a", "b", "c", "d"];
+console.log(reverseArray(sortedArray));
 
 
 // 1st iteration
@@ -100,7 +102,7 @@ console.log(result);
 // newArray[array.length-i-1] = array[i];
 // 4-3-1 = 0; = array[i] = array[3]
 // [0 "d"];
-// i--;
+// i--;  
 
 // // 2nd iteration
 // i = array.length-1; - array.length = 4 - 1 = 3 i-- = 2

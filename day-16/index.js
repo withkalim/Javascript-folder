@@ -1,10 +1,9 @@
-
 // Print message after 3 second gap
 setTimeout(() => {
 
     // here we can write message that we wan to show
     console.log("Good Evening Buddy");
-}, 5000);
+}, 5000); 
 
 
 
@@ -12,7 +11,7 @@ setTimeout(() => {
 setInterval( () => {
 
     console.log("This is setInterval....");
-}, 4000);
+}, 4000);                                
 
 
 
